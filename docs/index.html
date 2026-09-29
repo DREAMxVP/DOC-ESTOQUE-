@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#164c3d">
+    <meta name="description" content="Explore a prévia demonstrativa do Estoque + e baixe o APK para Android.">
+    <title>Estoque + | Prévia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="Estoque +, início">
+            <span class="brand-mark" aria-hidden="true">E<span>+</span></span>
+            <span class="brand-name">Estoque <strong>+</strong></span>
+        </a>
+        <div class="topbar-actions">
+            <span class="demo-label"><span class="demo-dot"></span> Prévia interativa</span>
+            <a class="button button-contact" href="mailto:ams.macenasilva@gmail.com?subject=Quero%20conhecer%20o%20Estoque%20%2B">Contato</a>
+            <a class="button button-download" href="estoque-mais-portfolio.apk" download><span aria-hidden="true">↓</span> Baixar APK</a>
+        </div>
+    </header>
+
+    <main id="inicio" class="page-shell">
+        <section class="intro" aria-labelledby="page-title">
+            <div>
+                <p class="eyebrow">CONTROLE DE ESTOQUE · DEMONSTRAÇÃO</p>
+                <h1 id="page-title">Visão geral<span>.</span></h1>
+                <p class="intro-copy">Um recorte navegável do Estoque +, com dados fictícios e recursos em modo de consulta.</p>
+            </div>
+            <div class="intro-meta">
+                <span class="meta-mark">DADOS DE EXEMPLO</span>
+                <span>Atualizado agora</span>
+            </div>
+        </section>
+
+        <div class="app-layout">
+            <aside class="sidebar" aria-label="Navegação da prévia">
+                <p class="sidebar-label">MENU</p>
+                <nav class="side-nav">
+                    <button class="nav-item is-current" type="button" data-view="inventory" aria-current="page">
+                        <span class="nav-icon" aria-hidden="true">▦</span> Estoque
+                    </button>
+                    <button class="nav-item" type="button" data-view="reports">
+                        <span class="nav-icon" aria-hidden="true">▤</span> Relatórios
+                    </button>
+                </nav>
+                <div class="sidebar-note">
+                    <span class="note-marker" aria-hidden="true"></span>
+                    <p><strong>Modo demonstração</strong><br>As alterações estão desativadas.</p>
+                </div>
+                <a class="sidebar-contact" href="mailto:ams.macenasilva@gmail.com?subject=Quero%20conhecer%20o%20Estoque%20%2B">Quero saber mais <span aria-hidden="true">↗</span></a>
+            </aside>
+
+            <section class="content-area" aria-live="polite">
+                <div id="inventory-view" class="view-panel">
+                    <div class="section-heading">
+                        <div><p class="section-kicker">SEU CATÁLOGO</p><h2>Produtos</h2></div>
+                        <span id="product-count" class="result-count">5 itens</span>
+                    </div>
+
+                    <section class="metrics" aria-label="Resumo do estoque">
+                        <div class="metric"><span class="metric-label">Produtos</span><strong id="metric-products">0</strong><span class="metric-foot">no catálogo</span></div>
+                        <div class="metric"><span class="metric-label">Unidades</span><strong id="metric-units">0</strong><span class="metric-foot">em estoque</span></div>
+                        <div class="metric metric-value"><span class="metric-label">Valor em custo</span><strong id="metric-value">R$ 0,00</strong><span class="metric-foot">estimativa demonstrativa</span></div>
+                        <div class="metric metric-alert"><span class="metric-label">Atenção</span><strong id="metric-alerts">0</strong><span class="metric-foot">itens no mínimo</span></div>
+                    </section>
+
+                    <div class="list-toolbar">
+                        <div class="list-title"><h3>Todos os produtos</h3><span class="readonly-mark"><span aria-hidden="true">●</span> Somente leitura</span></div>
+                        <label class="search-box">
+                            <span class="search-icon" aria-hidden="true">⌕</span>
+                            <span class="visually-hidden">Buscar produtos</span>
+                            <input id="product-search" type="search" placeholder="Buscar produto" autocomplete="off">
+                            <kbd>/</kbd>
+                        </label>
+                    </div>
+
+                    <div class="filter-bar" role="group" aria-label="Filtrar produtos">
+                        <button class="filter-button is-selected" type="button" data-filter="all" aria-pressed="true">Todos <span data-count="all">0</span></button>
+                        <button class="filter-button" type="button" data-filter="low" aria-pressed="false">Estoque baixo <span data-count="low">0</span></button>
+                        <button class="filter-button" type="button" data-filter="empty" aria-pressed="false">Sem estoque <span data-count="empty">0</span></button>
+                    </div>
+
+                    <div class="product-head" aria-hidden="true">
+                        <span>PRODUTO</span><span>CATEGORIA</span><span>DISPONIBILIDADE</span><span>PREÇO</span><span></span>
+                    </div>
+                    <div class="product-list" id="product-list" aria-label="Lista de produtos"></div>
+                    <p id="empty-results" class="empty-results" hidden>Nenhum produto encontrado.</p>
+                    <p class="list-footnote">Valores e movimentações desta prévia são fictícios.</p>
+                </div>
+
+                <div id="reports-view" class="view-panel" hidden>
+                    <div class="section-heading">
+                        <div><p class="section-kicker">ACOMPANHAMENTO</p><h2>Relatórios</h2></div>
+                        <span class="result-count">Dados de exemplo</span>
+                    </div>
+                    <section class="report-summary">
+                        <div><span class="metric-label">Movimentações registradas</span><strong id="report-movements">0</strong></div>
+                        <p>Entradas e saídas demonstrativas geradas pelo catálogo de exemplo.</p>
+                    </section>
+                    <div class="report-columns">
+                        <section class="report-block">
+                            <div class="report-heading"><div><p class="section-kicker">ATIVIDADE</p><h3>Movimentações recentes</h3></div><span class="report-symbol" aria-hidden="true">↕</span></div>
+                            <ol id="movement-list" class="movement-list"></ol>
+                        </section>
+                        <section class="report-block">
+                            <div class="report-heading"><div><p class="section-kicker">GIRO DE ESTOQUE</p><h3>Itens movimentados</h3></div><span class="report-symbol report-symbol-warm" aria-hidden="true">↗</span></div>
+                            <ol id="ranking-list" class="ranking-list"></ol>
+                        </section>
+                    </div>
+                    <p class="list-footnote">A versão completa permite acompanhar o histórico e exportar relatórios.</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="contact-strip" aria-label="Contato">
+            <div class="contact-copy">
+                <span class="contact-index">01 / PRÓXIMO PASSO</span>
+                <h2>Precisa de mais recursos?</h2>
+                <p>Converse comigo sobre a versão completa do Estoque +.</p>
+            </div>
+            <a class="button button-light" href="mailto:ams.macenasilva@gmail.com?subject=Quero%20conhecer%20o%20Estoque%20%2B">Entrar em contato <span aria-hidden="true">↗</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>Estoque + <span class="footer-plus">/</span> Prévia de portfólio</span>
+        <span>Aplicativo Android · <a href="https://github.com/DREAMxVP/DOC-ESTOQUE-">Código no GitHub</a></span>
+    </footer>
+
+    <dialog id="product-dialog" class="product-dialog">
+        <form method="dialog"><button class="dialog-close" aria-label="Fechar detalhes">×</button></form>
+        <div id="dialog-content"></div>
+        <a class="button button-download dialog-contact" href="mailto:ams.macenasilva@gmail.com?subject=Quero%20conhecer%20o%20Estoque%20%2B">Conhecer versão completa <span aria-hidden="true">↗</span></a>
+    </dialog>
+</body>
+</html>

@@ -4,7 +4,7 @@ Aplicativo Android para controle de produtos, estoque e movimentações.
 
 ## Prévia para portfólio
 
-A edição `portfolio` é uma demonstração somente leitura, com produtos fictícios criados localmente na primeira abertura. Ela não altera o estoque e oferece contato por e-mail para solicitar informações sobre a versão completa.
+A prévia web está em [dreamxvp.github.io/DOC-ESTOQUE-](https://dreamxvp.github.io/DOC-ESTOQUE-/) e permite explorar um catálogo fictício somente leitura. O workflow publica o conteúdo de `docs/` no GitHub Pages a cada atualização.
 
 Para gerar o APK no Windows:
 
@@ -12,7 +12,7 @@ Para gerar o APK no Windows:
 .\gradlew.bat :app:assemblePortfolioDebug
 ```
 
-O arquivo gerado fica em `app/build/outputs/apk/portfolio/debug/app-portfolio-debug.apk`. Para disponibilizá-lo, publique esse APK em uma GitHub Release; os diretórios `build/` são saídas locais do Gradle.
+O arquivo gerado fica em `app/build/outputs/apk/portfolio/debug/app-portfolio-debug.apk`. Para atualizar o download do site, copie o APK gerado para `docs/estoque-mais-portfolio.apk` antes de enviar as alterações. No Android, pode ser necessário autorizar a instalação de aplicativos baixados.
 
 ## Limite da demonstração
 
