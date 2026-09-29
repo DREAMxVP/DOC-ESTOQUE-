@@ -4,7 +4,7 @@ Aplicativo Android para controle de produtos, estoque e movimentações.
 
 ## Prévia para portfólio
 
-A prévia web está em [dreamxvp.github.io/DOC-ESTOQUE-](https://dreamxvp.github.io/DOC-ESTOQUE-/) e permite explorar um catálogo fictício somente leitura. O workflow publica o conteúdo de `docs/` no GitHub Pages a cada atualização.
+A prévia web estará em [dreamxvp.github.io/DOC-ESTOQUE-](https://dreamxvp.github.io/DOC-ESTOQUE-/) após a ativação inicial em **Settings > Pages > Build and deployment > Source: GitHub Actions**. Depois disso, o workflow publica o conteúdo de `docs/` automaticamente a cada atualização.
 
 Para gerar o APK no Windows:
 
