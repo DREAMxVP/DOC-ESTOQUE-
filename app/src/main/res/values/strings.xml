@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Estoque +</string>
+    <string name="contact_email">ams.macenasilva@gmail.com</string>
+    <string name="title_products">Produtos</string>
+    <string name="form_title_new">Novo produto</string>
+    <string name="form_title_edit">Editar produto</string>
+    <string name="label_name">Nome</string>
+    <string name="label_description">Descrição</string>
+    <string name="label_quantity">Quantidade</string>
+    <string name="label_cost_price">Preço custo</string>
+    <string name="label_sale_price">Preço venda</string>
+    <string name="label_photo">Foto</string>
+    <string name="button_choose_photo">Escolher foto</string>
+    <string name="button_save">Salvar</string>
+    <string name="button_cancel">Cancelar</string>
+    <string name="empty_state">Nenhum produto cadastrado</string>
+    <string name="delete">Excluir</string>
+    <string name="stock">Estoque</string>
+    <string name="total_value">Valor total</string>
+    <string-array name="product_filters">
+        <item>Todos</item>
+        <item>Ativos</item>
+        <item>Inativos</item>
+        <item>Estoque baixo</item>
+        <item>Sem estoque</item>
+    </string-array>
+</resources>

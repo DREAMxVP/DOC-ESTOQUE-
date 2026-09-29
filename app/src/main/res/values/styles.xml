@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#1B6B5D</item>
+        <item name="colorPrimaryVariant">#14514B</item>
+        <item name="colorSecondary">#4AAE9B</item>
+        <item name="android:statusBarColor">#F7F8F6</item>
+        <item name="android:navigationBarColor">#F7F8F6</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.White" parent="AppTheme">
+        <item name="colorPrimary">#1B6B5D</item>
+        <item name="android:statusBarColor">#F7F8F6</item>
+        <item name="android:navigationBarColor">#F7F8F6</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.Black" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFCC00</item>
+        <item name="colorPrimaryVariant">#B58A00</item>
+        <item name="android:statusBarColor">#111111</item>
+        <item name="android:navigationBarColor">#111111</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AppTheme.LightGold" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#F5C451</item>
+        <item name="colorPrimaryVariant">#D8A734</item>
+        <item name="android:statusBarColor">#FFF8D8</item>
+        <item name="android:navigationBarColor">#FFF8D8</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
